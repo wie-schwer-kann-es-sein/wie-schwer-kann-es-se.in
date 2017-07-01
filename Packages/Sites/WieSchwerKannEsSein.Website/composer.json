@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "wieschwerkannessein/website",
+    "autoload": {
+        "psr-4": {
+            "WieSchwerKannEsSein\\Website\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "WieSchwerKannEsSein.Website"
+        }
+    }
+}
