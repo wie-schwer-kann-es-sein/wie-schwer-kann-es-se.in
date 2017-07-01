@@ -21,3 +21,5 @@
 Build/Resources/Java/selenium-server-standalone*
 /"
 /composer.lock
+/Readme.rst
+/Upgrading.rst
