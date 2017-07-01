@@ -5,8 +5,9 @@
 /Build/Resources
 /Configuration/
 /Data/
-/Packages/
-!/Packages/Sites/**
+/Packages/**
+!/Packages/Sites**
+
 /Web/
 /bin/
 /Readme.txt
