@@ -12,12 +12,18 @@
 </head>
 <body>
 <f:section name="body">
-	<nav class="menu">
-		{parts.menu -> f:format.raw()}
-	</nav>
+	<header>
+		<h1>Wie schwer kann es sein?</h1>
+		<nav class="menu">
+			{parts.menu -> f:format.raw()}
+		</nav>
+	</header>
 	<div class="content">
 		{content -> f:format.raw()}
 	</div>
+	<footer>
+		&copy; 2017 "Wie schwer kann es sein?"-Team | <a href="/kontakt.html">Kontak/Impressum</a>
+	</footer>
 </f:section>
 <f:section name="bodyScripts">
 	<script src="{f:uri.resource(path: 'JavaScript/main-v-1.0.js', package: 'WieSchwerKannEsSein.Website')}"></script>
