@@ -11,5 +11,6 @@ podcast.addEventListener("click",
       sound.play();
       podcast.className += "playing";
     }
+    event.preventDefault();
   },
   false);
