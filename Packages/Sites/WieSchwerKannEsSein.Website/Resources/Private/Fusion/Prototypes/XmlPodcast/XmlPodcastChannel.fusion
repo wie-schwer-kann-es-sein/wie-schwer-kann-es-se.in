@@ -1,0 +1,10 @@
+prototype(WieSchwerKannEsSein.Website:XmlPodcastChannel) < prototype(Neos.Fusion:Tag) {
+  tagName = 'channel'
+  content = Neos.Fusion:Array {
+    1 = "<title>Title</title>"
+    2 = "<link>Link</link>"
+    3 = "<language>de-de</language>"
+    4 = "<copyright>&#x2117; &amp; &#xA9; 2014 John Doe &amp; Family</copyright>"
+    5 = "<itunes:subtitle>A show about everything</itunes:subtitle>"
+  }
+}

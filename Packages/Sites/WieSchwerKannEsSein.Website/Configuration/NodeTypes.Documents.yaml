@@ -1,0 +1,124 @@
+#'Neos.NodeTypes:Page':
+#  childNodes:
+#    'sidebar':
+#      type: 'Neos.Neos:ContentCollection'
+
+'WieSchwerKannEsSein.Website:PodcastFolge':
+  superTypes:
+    'Neos.NodeTypes:Page': TRUE
+  ui:
+    label: 'Podcast Folge'
+    icon: 'icon-microphone'
+    inspector:
+      groups:
+        podcastPanel:
+          label: 'Podcast Infos'
+          position: 10
+          collapsed: FALSE
+  properties:
+    podcastSubtitle:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: 'Untertitel'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 10
+    podcastSummary:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: 'Zusammenfassung'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 20
+          editor: 'Neos.Neos/Inspector/Editors/TextAreaEditor'
+    podcastImage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: 'Bild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 30
+    podcastDuration:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: 'Dauer'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 40
+    podcastFileSize:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: 'Größe der Datei'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 50
+    podcastFileType:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      defaultValue: 'audio/mpeg'
+      ui:
+        label: 'Typ der Datei'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 50
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'audio/mpeg':
+                label: 'audio/mpeg'
+              'video/x-m4v':
+                label: 'video/x-m4v'
+    podcastFile:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: 'Datei'
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 60
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+    podcastDateTime:
+      type: DateTime
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+        'Neos.Neos/Validation/DateTimeValidator': []
+      ui:
+        label: 'Veröffentlichungsdatum'
+        inspector:
+          group: 'podcastPanel'
+          position: 70
+          editorOptions:
+            format: 'd.m.Y H:i'
+      search:
+        elasticSearchMapping:
+          type: 'date'
+          format: 'date_time_no_millis'
+        indexing: '${(value ? Date.format(value, "Y-m-d\TH:i:sP") : null)}'
+    podcastExplicit:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Ist geflucht worden?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'podcastPanel'
+          position: 80

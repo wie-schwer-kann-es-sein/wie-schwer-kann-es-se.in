@@ -1,0 +1,17 @@
+##
+# XML Podcast Feed
+
+-
+  name:  'XML Podcast Feed'
+  uriPattern: '{node}<xmlPodcastFeedPath>'
+  defaults:
+    '@package':    'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action':     'show'
+    '@format':     'xml.podcastfeed'
+  routeParts:
+    'node':
+      handler:     'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+      options:
+        onlyMatchSiteNodes: true
+  appendExceedingArguments: true

@@ -1,0 +1,12 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        WieSchwerKannEsSein.Website: true
+  Flow:
+    mvc:
+      routes:
+        'WieSchwerKannEsSein.Website':
+          position: 'start'
+          variables:
+            xmlPodcastFeedPath: 'podcast-feed.xml'

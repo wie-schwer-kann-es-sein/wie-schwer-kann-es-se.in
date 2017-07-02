@@ -1,0 +1,8 @@
+prototype(WieSchwerKannEsSein.Website:XmlPodcastRss) < prototype(Neos.Fusion:Tag) {
+  tagName = 'rss'
+  attributes {
+    version = "2.0"
+    xmlns:itunes = "http://www.itunes.com/dtds/podcast-1.0.dtd"
+  }
+  content = WieSchwerKannEsSein.Website:XmlPodcastChannel
+}
