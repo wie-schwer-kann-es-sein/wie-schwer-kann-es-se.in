@@ -1,15 +1,23 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace fusion=Neos\Fusion\ViewHelpers}
-<div>
-Podcast
-
-{title}
-{subtitle}
-{summary}
-{imageUri}
-{file}
-{duration}
-<f:format.date date="{dateTime}" format="D, d M o H:i:s" /> GMT
-
-{main -> f:format.raw()}
-</div>
+<section>
+  <header>
+    <h1>
+      {title}
+      <small>{subtitle}</small>
+    </h1>
+    <dl>
+      <dt>Zu dem Zeitpunkt haben wir ihn gemacht</dt>
+      <dd><f:format.date date="{dateTime}" format="D, d M o H:i:s" /> GMT</dd>
+      <dt>Solange brauchst Du zum zuhören</dt>
+      <dd>{duration} Minuten</dd>
+    </dl>
+    <p>{summary}</p>
+    <div class="player">
+      <a href="#" id="playPause" data-podcastfile="{file}">Play/Pause</a>
+    </div>
+  </header>
+  <main>
+    {main -> f:format.raw()}
+  </main>
+</section>
