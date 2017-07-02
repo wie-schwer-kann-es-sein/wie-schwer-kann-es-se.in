@@ -113,12 +113,3 @@
           type: 'date'
           format: 'date_time_no_millis'
         indexing: '${(value ? Date.format(value, "Y-m-d\TH:i:sP") : null)}'
-    podcastExplicit:
-      type: boolean
-      defaultValue: false
-      ui:
-        label: 'Ist geflucht worden?'
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'podcastPanel'
-          position: 80

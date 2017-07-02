@@ -1,0 +1,2 @@
+prototype(WieSchwerKannEsSein.Website:PagePodcastsFolge) < prototype(WieSchwerKannEsSein.Website:PageBasics) {
+}

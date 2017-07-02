@@ -1,10 +1,94 @@
 prototype(WieSchwerKannEsSein.Website:XmlPodcastChannel) < prototype(Neos.Fusion:Tag) {
   tagName = 'channel'
   content = Neos.Fusion:Array {
-    1 = "<title>Title</title>"
-    2 = "<link>Link</link>"
-    3 = "<language>de-de</language>"
-    4 = "<copyright>&#x2117; &amp; &#xA9; 2014 John Doe &amp; Family</copyright>"
-    5 = "<itunes:subtitle>A show about everything</itunes:subtitle>"
+    1 = '<title>Wie schwer kann es sein?</title>'
+    2 = '<link>http://www.wie-schwer-kann-es-se.in</link>'
+    3 = '<language>de-de</language>'
+    4 = '<copyright>&#xA9; 2017 Lennart Zellmer &amp; Frederic Darmst&#228;dter</copyright>'
+    5 = '<itunes:subtitle>Wir probieren alles m&#246;gliche aus.</itunes:subtitle>'
+    6 = '<itunes:author>Frederic Darmst&#228;dter &amp; Lennart Zellmer</itunes:author>'
+    7 = '<itunes:summary>All About Everything is a show about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our podcast in the Podcasts app or in the iTunes Store</itunes:summary>'
+    8 = '<description>All About Everything is a show about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our podcast in the Podcasts app or in the iTunes Store</description>'
+    9 = '<itunes:owner>'
+      10 = '<itunes:name>Lennart Zellmer &amp; Frederic Darmst&#228;dter</itunes:name>'
+      11 = '<itunes:email>menschen@wie-schwer-kann-es-se.in</itunes:email>'
+    12 = '</itunes:owner>'
+    13 = '<itunes:image href="http://example.com/podcasts/everything/AllAboutEverything.jpg"/>'
+    14 = '<itunes:category text="Technology">'
+      15 = '<itunes:category text="Podcasting" />'
+    16 = '</itunes:category>'
+    17 = '<itunes:explicit>no</itunes:explicit>'
+
+    18 = Neos.Fusion:Collection {
+      collection = ${q(site).children('[instanceof WieSchwerKannEsSein.Website:PodcastFolge]')}
+      itemName = 'element'
+      itemRenderer = Neos.Fusion:Tag {
+       tagName = 'item'
+       content = Neos.Fusion:Array {
+        1 = Neos.Fusion:Tag {
+          tagName = 'title'
+          content = ${q(element).property('title')}
+        }
+        2 = Neos.Fusion:Tag {
+          tagName = 'itunes:author'
+          content = 'Lennart Zellmer &amp; Frederic Darmst&#228;dter'
+        }
+        3 = Neos.Fusion:Tag {
+          tagName = 'itunes:subtitle'
+          content = ${q(element).property('podcastSubtitle')}
+        }
+        4 = Neos.Fusion:Tag {
+          tagName = 'itunes:summary'
+          content = ${q(element).property('podcastSummary')}
+        }
+        5 = Neos.Fusion:Tag {
+          tagName = 'itunes:image'
+          attributes {
+            href = Neos.Neos:ImageUri {
+              asset = ${q(element).property('podcastImage')}
+              width = 1000
+              height = 1000
+            }
+          }
+        }
+        6 = Neos.Fusion:Tag {
+          tagName = 'enclosure'
+          attributes {
+            length = ${q(element).property('podcastFileSize')}
+            type = ${q(element).property('podcastFileType')}
+            url = ${q(element).property('podcastFile')}
+            url.@process.convertUris = Neos.Neos:ConvertUris
+          }
+        }
+        7 = Neos.Fusion:Tag {
+          tagName = 'guid'
+          attributes {
+            isPermaLink = 'false'
+          }
+          content = ${q(element).property('podcastFile')}
+          content.@process.convertUris = Neos.Neos:ConvertUris
+        }
+
+        8 = Neos.Fusion:Template {
+          templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/XmlPodcast/pubDate.html'
+          podcastDateTime = ${q(element).property('podcastDateTime')}
+        }
+
+        9 = Neos.Fusion:Tag {
+          tagName = 'itunes:duration'
+          content = ${q(element).property('podcastDuration')}
+        }
+
+        9 = Neos.Fusion:Tag {
+          tagName = 'itunes:explicit'
+          content = 'no'
+        }
+
+
+
+       }
+      }
+
+    }
   }
 }

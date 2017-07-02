@@ -1,0 +1,2 @@
+prototype(WieSchwerKannEsSein.Website:PageHome) < prototype(WieSchwerKannEsSein.Website:PageBasics) {
+}
