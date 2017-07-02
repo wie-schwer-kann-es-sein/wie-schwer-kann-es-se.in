@@ -1,6 +1,11 @@
 prototype(WieSchwerKannEsSein.Website:XmlPodcastFeed) < prototype(Neos.Fusion:Http.Message) {
-	doctype = '<?xml version="1.0" encoding="UTF-8"?>'
+	doctype = '<?xml version="1.0" encoding="UTF-8" ?> '
 	httpResponseHead.headers.Content-Type = 'text/xml'
 
-	body = WieSchwerKannEsSein.Website:XmlPodcastRss
+	body = Neos.Fusion:Array {
+		10 = "
+"
+
+		20 = WieSchwerKannEsSein.Website:XmlPodcastRss
+	}
 }
