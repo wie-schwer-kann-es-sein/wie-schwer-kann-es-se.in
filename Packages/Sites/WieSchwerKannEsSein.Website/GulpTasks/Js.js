@@ -4,6 +4,7 @@ var gp_uglify = require('gulp-uglify');
 
 gulp.task('js', function(){
     return gulp.src([
+                      'Resources/Private/JavaScript/howler.js',
                       'Resources/Private/JavaScript/main.js'
                     ])
         .pipe(gp_concat('main-v-1.0.js'))
