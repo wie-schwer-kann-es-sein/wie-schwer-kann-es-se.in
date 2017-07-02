@@ -1,0 +1,15 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<div>
+Podcast
+
+{title}
+{subtitle}
+{summary}
+{imageUri}
+{file}
+{duration}
+<f:format.date date="{dateTime}" format="D, d M o H:i:s" /> GMT
+
+{main -> f:format.raw()}
+</div>

@@ -23,8 +23,8 @@ prototype(WieSchwerKannEsSein.Website:PageBasics) < prototype(Neos.Neos:Page) {
                         }
                 }
 
-                content {
-
+                content = Neos.Fusion:Template {
+                        templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/Content/Default.html'
                         main = Neos.Neos:PrimaryContent {
                                 nodePath = 'main'
                         }

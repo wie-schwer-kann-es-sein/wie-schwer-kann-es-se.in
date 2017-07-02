@@ -1,2 +1,3 @@
 prototype(WieSchwerKannEsSein.Website:PageHome) < prototype(WieSchwerKannEsSein.Website:PageBasics) {
+  body.content.templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/Content/Homepage.html'
 }

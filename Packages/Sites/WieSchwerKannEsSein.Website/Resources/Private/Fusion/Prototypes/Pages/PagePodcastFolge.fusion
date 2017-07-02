@@ -1,2 +1,18 @@
 prototype(WieSchwerKannEsSein.Website:PagePodcastsFolge) < prototype(WieSchwerKannEsSein.Website:PageBasics) {
+  body.content {
+    templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/Content/PodcastFolge.html'
+    title = ${q(node).property('title')}
+    subtitle = ${q(node).property('podcastSubtitle')}
+    summary = ${q(node).property('podcastSummary')}
+    imageUri = Neos.Neos:ImageUri {
+      asset = ${q(node).property('podcastImage')}
+      width = 1000
+      height = 1000
+    }
+    file = ${q(node).property('podcastFile')}
+    file.@process.convertUris = Neos.Neos:ConvertUris
+    dateTime = ${q(node).property('podcastDateTime')}
+    duration = ${q(node).property('podcastDuration')}
+  }
+
 }
