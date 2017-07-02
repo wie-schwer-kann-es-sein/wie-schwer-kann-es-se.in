@@ -6,6 +6,7 @@
 	<f:section name="stylesheets">
 		<!-- Put your stylesheet inclusions here, they will be included in your website by Fusion -->
 		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/main-v-1.0.css', package: 'WieSchwerKannEsSein.Website')}"></link>
+		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 	</f:section>
 	<f:section name="headScripts">
 		<!-- Put your scripts inclusions for the head here, they will be included in your website by Fusion -->
@@ -14,7 +15,7 @@
 <body>
 <f:section name="body">
 	<header>
-		<h1>Wie schwer kann es sein?</h1>
+		<h1>Wie schwer kann es sein…</h1>
 		<nav class="menu">
 			{parts.menu -> f:format.raw()}
 		</nav>
@@ -22,8 +23,8 @@
 	<div class="l-content">
 		{content -> f:format.raw()}
 	</div>
-	<footer>
-		&copy; 2017 "Wie schwer kann es sein?"-Team | <a href="/kontakt.html">Kontak/Impressum</a>
+	<footer class="c-footer">
+		&copy; 2017 "Wie schwer kann es sein?"-Team
 	</footer>
 </f:section>
 <f:section name="bodyScripts">

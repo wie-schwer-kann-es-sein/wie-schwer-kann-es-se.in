@@ -1,6 +1,6 @@
 body
   background-color: $color-white
-  font-family: sans-serif
+  font-family: 'Slabo 27px', serif
   font-size: 16px
   @include grid-container
 
@@ -13,6 +13,10 @@ h1
     font-size: 1em
     color: $color-decent
 
+a
+  text-decoration: none
+  color: $color-action
+
 .l-content
   @include grid-column(6)
-  @include grid-shift(3)
+  @include grid-push(3)
