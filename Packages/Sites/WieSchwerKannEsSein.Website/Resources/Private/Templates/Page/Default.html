@@ -5,6 +5,7 @@
 <head>
 	<f:section name="stylesheets">
 		<!-- Put your stylesheet inclusions here, they will be included in your website by Fusion -->
+		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/main-v-1.0.css', package: 'WieSchwerKannEsSein.Website')}"></link>
 	</f:section>
 	<f:section name="headScripts">
 		<!-- Put your scripts inclusions for the head here, they will be included in your website by Fusion -->
@@ -15,7 +16,7 @@
 	<nav class="menu">
 		{parts.menu -> f:format.raw()}
 	</nav>
-	<div class="content">
+	<div class="l-content">
 		{content -> f:format.raw()}
 	</div>
 </f:section>

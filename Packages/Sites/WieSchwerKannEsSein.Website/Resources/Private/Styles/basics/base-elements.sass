@@ -1,0 +1,18 @@
+body
+  background-color: $color-white
+  font-family: sans-serif
+  font-size: 16px
+  @include grid-container
+
+h1
+  text-transform: uppercase
+  color: $color-main
+  text-align: center
+  small
+    font-weight: lighter
+    font-size: 1em
+    color: $color-decent
+
+.l-content
+  @include grid-column(6)
+  @include grid-shift(3)
