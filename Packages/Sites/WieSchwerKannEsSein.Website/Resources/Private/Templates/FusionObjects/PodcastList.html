@@ -1,0 +1,29 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace ts=Neos\Fusion\ViewHelpers}
+<ul{attributes -> f:format.raw()}>
+	<f:render section="itemsList" arguments="{items: items}" />
+</ul>
+
+<f:section name="itemsList">
+	<f:for each="{items}" as="item">
+		<li{ts:render(path: '{item.state}.attributes', context: {item: item}) -> f:format.raw()}>
+      <neos:link.node node="{item.node}" >
+        <article>
+          <header>
+            <h1>
+              {item.node.properties.title}
+              <small>{item.node.properties.podcastSubtitle}</small>
+            </h1>
+            <dl>
+              <dt>Zu dem Zeitpunkt haben wir ihn gemacht</dt>
+              <dd><f:format.date date="{item.node.properties.podcastDateTime}" format="d.m.o" /></dd>
+              <dt>Solange brauchst Du zum zuhören</dt>
+              <dd>{item.node.properties.podcastDuration} Minuten</dd>
+            </dl>
+            <p>{item.node.properties.podcastSummary}</p>
+          </header>
+        </article>
+      </neos:link.node>
+		</li>
+	</f:for>
+</f:section>

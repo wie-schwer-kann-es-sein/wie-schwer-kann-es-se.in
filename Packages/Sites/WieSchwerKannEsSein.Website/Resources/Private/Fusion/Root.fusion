@@ -2,8 +2,8 @@ include: Prototypes/**/*
 
 
 root.homepage {
-	condition = ${q(node).is('[instanceof WieSchwerKannEsSein.Website:Homepage]')}
-	type = WieSchwerKannEsSein.Website:PageHome
+	condition = ${q(node).is('[instanceof WieSchwerKannEsSein.Website:HomePage]')}
+	type = 'WieSchwerKannEsSein.Website:PageHome'
 }
 
 root.podcastfolge {
