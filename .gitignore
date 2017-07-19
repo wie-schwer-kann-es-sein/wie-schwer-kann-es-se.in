@@ -25,3 +25,4 @@ Build/Resources/Java/selenium-server-standalone*
 /Upgrading.rst
 .DS_Store
 magicbox
+.idea
