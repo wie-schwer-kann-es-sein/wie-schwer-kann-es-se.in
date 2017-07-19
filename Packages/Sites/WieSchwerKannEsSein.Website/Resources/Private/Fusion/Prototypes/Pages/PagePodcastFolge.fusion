@@ -10,7 +10,9 @@ prototype(WieSchwerKannEsSein.Website:PagePodcastsFolge) < prototype(WieSchwerKa
       height = 1000
     }
     file = ${q(node).property('podcastFile')}
-    file.@process.convertUris = Neos.Neos:ConvertUris
+    file.@process.convertUris = Neos.Neos:ConvertUris {
+      forceConversion = TRUE
+    }
     dateTime = ${q(node).property('podcastDateTime')}
     duration = ${q(node).property('podcastDuration')}
   }
