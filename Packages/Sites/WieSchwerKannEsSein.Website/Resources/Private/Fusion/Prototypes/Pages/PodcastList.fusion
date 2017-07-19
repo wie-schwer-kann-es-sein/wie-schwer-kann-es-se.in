@@ -1,0 +1,6 @@
+prototype(WieSchwerKannEsSein.Website:PodcastList) < prototype(Neos.Neos:Menu) {
+    itemCollection = ${q(site).children('[instanceof WieSchwerKannEsSein.Website:PodcastFolge]').get()}
+    templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/FusionObjects/PodcastList.html'
+    entryLevel = 1
+    maximumLevels = 1
+}

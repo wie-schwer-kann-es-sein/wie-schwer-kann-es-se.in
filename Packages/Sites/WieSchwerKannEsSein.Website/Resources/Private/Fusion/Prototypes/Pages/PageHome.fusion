@@ -1,11 +1,6 @@
 prototype(WieSchwerKannEsSein.Website:PageHome) < prototype(WieSchwerKannEsSein.Website:PageBasics) {
   body.content {
     templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/Content/Homepage.html'
-    podcastList = Neos.Neos:Menu {
-      itemCollection = ${q(site).children('[instanceof WieSchwerKannEsSein.Website:PodcastFolge]').get()}
-      templatePath = 'resource://WieSchwerKannEsSein.Website/Private/Templates/FusionObjects/PodcastList.html'
-      entryLevel = 1
-      maximumLevels = 1
-    }
+    podcastList = WieSchwerKannEsSein.Website:PodcastList
   }
 }
