@@ -4,12 +4,6 @@
   ui:
     label: 'Startseite'
 
-'WieSchwerKannEsSein.Website:DefaultPage':
-  superTypes:
-    'Neos.NodeTypes:Page': TRUE
-  ui:
-    label: 'Normale Seite'
-
 'WieSchwerKannEsSein.Website:PodcastFolge':
   superTypes:
     'Neos.NodeTypes:Page': TRUE
