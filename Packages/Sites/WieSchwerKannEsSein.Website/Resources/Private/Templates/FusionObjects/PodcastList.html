@@ -10,17 +10,19 @@
       <neos:link.node node="{item.node}" >
         <article class="c-podcast">
           <header>
-            <h1>
+            <h2>
               {item.node.properties.title}
               <small>{item.node.properties.podcastSubtitle}</small>
-            </h1>
+            </h2>
             <dl>
               <dt>Zu dem Zeitpunkt haben wir ihn gemacht</dt>
               <dd><f:format.date date="{item.node.properties.podcastDateTime}" format="d.m.o" /></dd>
               <dt>Solange brauchst Du zum zuhören</dt>
               <dd>{item.node.properties.podcastDuration} Minuten</dd>
             </dl>
-            <p>{item.node.properties.podcastSummary}</p>
+            <p>
+                <f:format.crop maxCharacters="40">{item.node.properties.podcastSummary}</f:format.crop>
+            </p>
           </header>
         </article>
       </neos:link.node>

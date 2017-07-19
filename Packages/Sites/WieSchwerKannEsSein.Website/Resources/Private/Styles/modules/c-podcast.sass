@@ -1,22 +1,29 @@
 .c-podcast
+  header
+    h2
+      text-align: left
   background-color: #fff
-  padding: 1em
+  padding: 2.3em
   border-radius: 0.3em
-  text-align: center
+  text-align: left
   box-shadow: 0px 2px 3px 0px #e3e3e3
   transition: all 150ms ease
   transform: translateZ(0px)
   margin-bottom: 1em
 
+  p
+    color: $color-main
+    font-weight: 350
+
   &:hover
     box-shadow: 0px 2px 3px 2px #e3e3e3
-    transform: translateZ(0px) scale(1.01,)
+    transform: translateY(-1px)
   dl
     display: flex
     flex-direction: column
     justify-content: center
     dd
       margin: 0em
-
+      color: $color-main
     dt
       color: $color-decent
