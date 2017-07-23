@@ -8,4 +8,12 @@ prototype(WieSchwerKannEsSein.Website:XmlPodcastFeed) < prototype(Neos.Fusion:Ht
 
 		20 = WieSchwerKannEsSein.Website:XmlPodcastRss
 	}
+	@cache {
+		mode = 'uncached'
+		context {
+			1 = 'site'
+			2 = 'node'
+			3 = 'documentNode'
+		}
+	}
 }
