@@ -13,7 +13,7 @@ prototype(WieSchwerKannEsSein.Website:XmlPodcastChannel) < prototype(Neos.Fusion
       10 = '<itunes:name>Lennart Zellmer &amp; Frederic Darmst&#228;dter</itunes:name>'
       11 = '<itunes:email>menschen@wie-schwer-kann-es-se.in</itunes:email>'
     12 = '</itunes:owner>'
-    13 = '<itunes:image href="http://wie-schwer-kann-es-se.in/_Resources/Persistent/830f1cb49baf0c9704dbab3eed004d4095d21f90/wie-schwer-kann-es-sein_thumbnail.jpg"/>'
+    13 = '<itunes:image href="http://wie-schwer-kann-es-se.in/_Resources/Persistent/c1705522c392b68c6292ecb930435879dbd5a0fc/wie-schwer-kann-es-sein_thumbnail.jpg"/>'
     14 = '<itunes:category text="Technology">'
       15 = '<itunes:category text="Podcasting" />'
     16 = '</itunes:category>'
