@@ -79,7 +79,7 @@ prototype(WieSchwerKannEsSein.Website:XmlPodcastChannel) < prototype(Neos.Fusion
           content = ${q(element).property('podcastDuration')}
         }
 
-        9 = Neos.Fusion:Tag {
+        10 = Neos.Fusion:Tag {
           tagName = 'itunes:explicit'
           content = 'no'
         }
