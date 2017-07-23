@@ -1,5 +1,9 @@
 include: Prototypes/**/*
 
+root.xmlSitemap {
+	condition = ${request.format == 'xml.podcastfeed'}
+	type = 'WieSchwerKannEsSein.Website:XmlPodcastFeed'
+}
 
 root.homepage {
 	condition = ${q(node).is('[instanceof WieSchwerKannEsSein.Website:HomePage]')}
@@ -9,11 +13,6 @@ root.homepage {
 root.podcastfolge {
 	condition = ${q(node).is('[instanceof WieSchwerKannEsSein.Website:PodcastFolge]')}
 	type = 'WieSchwerKannEsSein.Website:PagePodcastsFolge'
-}
-
-root.xmlSitemap {
-	condition = ${request.format == 'xml.podcastfeed'}
-	type = 'WieSchwerKannEsSein.Website:XmlPodcastFeed'
 }
 
 page = WieSchwerKannEsSein.Website:Page
